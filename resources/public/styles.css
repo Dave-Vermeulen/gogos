@@ -1,0 +1,40 @@
+/* gyal must have body */
+body {
+    background: radial-gradient(circle, #4e342e, #2e1d18); /* coffee color */
+    color: #fff;
+    font-family: 'Noto Sans', serif;
+    text-align: center;
+}
+
+/* landing-page */
+.landing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.coffee-cup {
+    width: 150px;
+    height: 150px;
+    background: url('/images/dancing-cup.gif') no-repeat center center;
+    background-size: contain;
+    animation: dance 2s infinite ease-in-out;
+    cursor: pointer;
+  }
+  
+  @keyframes dance {
+    0%, 100% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+  }
+  
+  .blurb {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .hint {
+    font-size: 0.9rem;
+    color: #a1887f;
+  }
