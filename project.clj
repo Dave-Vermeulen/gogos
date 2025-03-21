@@ -1,4 +1,6 @@
-(defproject gogo-x-roads "0.1.0-SNAPSHOT"
+(defproject gogo-x-roads "0.1.0"
+  :source-paths ["src"]
+  :java-source-paths ["src/java"]
   :description "This is FOSS Tech camp with STEM curriculum for the youth by the youth"
   :url "http://example.com/FIXME"
   :license {:name "EPL-2.0 OR GPL-2.0-or-later WITH Classpath-exception-2.0"
@@ -11,8 +13,10 @@
                 [hiccup "2.0.0-alpha2"]
                 [ring/ring-json "0.5.1"]
                 [org.xerial/sqlite-jdbc "3.36.0.3"]
+                ;;[imagemagick "0.4.3"]
                 [org.clojure/java.jdbc "0.7.12"]
                 [buddy/buddy-hashers "1.6.0"]] ;;password hashing
+  :prep-tasks [["javac"] "compile"]
                 
   :main ^:skip-aot gogo-x-roads.core
   :target-path "target/%s"

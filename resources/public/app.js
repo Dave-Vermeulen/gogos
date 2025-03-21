@@ -3,7 +3,7 @@ const cup = document.querySelector('.coffee-cup');
 
 cup.addEventListener('click', () => {
     clickCount ++;
-    if (lickCount >= Math.floor(Math.random() * 9) + 1) {
+    if (clickCount >= Math.floor(Math.random() * 9) + 1) {
         window.location.href = "/about";
     }
 });
