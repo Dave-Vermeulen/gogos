@@ -14,19 +14,21 @@ FIXME: explanation
 
 ## Structure
 
-gogo-xroads/
+gogo-x-roads/
 ├── src/
-│   ├── gogo-x-roads/
-│   │   ├── core.clj     ;; Main application logic (routes, views, etc.)
-│   │   └── db.clj       ;; Database setup and interactions (still to create)
-├── resources/           ;; Static assets (CSS, JS)
-│   ├── public/          ;; If we ever serve static files directly
-│   │   ├── styles.css   ;; Custom CSS file for styling
-│   │   └── app.js       ;; Custom JavaScript (e.g., click animations)
-├── db/                  ;; Directory for the SQLite database file
-│   └── gogo-xroads.db   ;; SQLite DB (created dynamically during the app run)
-├── project.clj          ;; Leiningen project configuration
-├── README.md            ;; Project documentation
+│   ├── gogo_x_roads/              # ✅ Clojure code (underscores match hyphens)
+│   │   ├── core.clj              # Main entry: (ns gogo-x-roads.core ...)
+│   │   ├── db.clj
+│   │   └── gif.clj               # GIF generation code
+│   └── java/                     # ✅ Java code directory
+│       └── gogo_x_roads/         # Matches package name
+│           └── GifSequenceWriter.java # ✅ package gogo_x_roads;
+├── resources/
+│   └── public/
+│       ├── images/               # Output dir for coffee_dance.gif
+│       ├── styles.css
+│       └── app.js
+└── project.clj                   # Fixed config below
 
 FIXME: listing of options this app accepts.
 
