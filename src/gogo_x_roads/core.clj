@@ -79,7 +79,7 @@
   (POST "/signup" [username password] (signup-user username password))
   (GET "/" [] (landing-page))
   (GET "/about" [] (about-page))
-  (route/resources "/") ;;static routes for css and js
+  (route/resources "/" {:root "public"}) ;;static routes for css and js
   (route/not-found "Not Found"))
 
 (def app
