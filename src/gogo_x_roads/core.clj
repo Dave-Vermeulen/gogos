@@ -49,30 +49,36 @@
 (defn about-page []
   (html5
     [:head
-     [:title "gogo's X roads"]
+     [:title "About | gogo's X Roads"]
      (include-css "/styles.css")]
     [:body
-     [:div {:class "about"}
-      [:h1 "About"]
-      [:p "gogo's X roads is a simple web app that demonstrates the use of Clojure, Compojure, and Hiccup. It is a simple game where you click on a coffee cup to reveal a secret message. The secret is in the coffee...Can you figure it out?"]
-      ]
-    [:div {:class "programs"}
-      [:div {:class "program-card" :id "moveit"}
-       [:img {:src "/images/moveit-icon.png" :alt "MoveIT Icon"}]
-       [:h2 "MoveIT"]
-       [:p "Discover wellness through yoga, hiking, and more."]]
-      [:div {:class "program-card" :id "codeit"}
-       [:img {:src "/images/codeit-icon.png" :alt "CodeIT Icon"}]
-       [:h2 "CodeIT"]
-       [:p "Learn computer science with games."]]
-      [:div {:class "program-card" :id "growit"}
-       [:img {:src "/images/growit-icon.png" :alt "GrowIT Icon"}]
-       [:h2 "GrowIT"]
-       [:p "Grow a sustainable future through gardening."]]
-      [:div {:class "program-card" :id "makeit"}
-       [:img {:src "/images/makeit-icon.png" :alt "MakeIT Icon"}]
-       [:h2 "MakeIT"]
-       [:p "Gain real-world experience and build projects."]]]]))
+     [:div.about-page
+      [:h1 "Our Programs"]
+      [:div.program-grid
+       ;; Each program card
+       [:div.program-card
+        [:div.program-icon-wrapper
+         [:img.program-icon {:src "/images/moveit-icon.png" :alt "MoveIT Icon"}]]
+        [:h2 "MoveIT"]
+        [:p "Wellness through physical activities like yoga, hiking, and more."]]
+       
+       [:div.program-card
+        [:div.program-icon-wrapper
+         [:img.program-icon {:src "/images/codeit-icon.png" :alt "CodeIT Icon"}]]
+        [:h2 "CodeIT"]
+        [:p "Inspiration and gamification to master computer science."]]
+       
+       [:div.program-card
+        [:div.program-icon-wrapper
+         [:img.program-icon {:src "/images/growit-icon.png" :alt "GrowIT Icon"}]]
+        [:h2 "GrowIT"]
+        [:p "Nurturing sustainable agriculture and community gardens."]]
+       
+       [:div.program-card
+        [:div.program-icon-wrapper
+         [:img.program-icon {:src "/images/makeit-icon.png" :alt "MakeIT Icon"}]]
+        [:h2 "MakeIT"]
+        [:p "Hands-on experience in real-world projects and design."]]]]]))
 
 (defroutes app-routes
   (POST "/login" [username password] (login-user username password))
