@@ -87,4 +87,5 @@
 
 (defn -main []
   (db/initialize-db)
+  (gif/generate-coffee-gif!)
   (run-jetty app {:port 3000}))
