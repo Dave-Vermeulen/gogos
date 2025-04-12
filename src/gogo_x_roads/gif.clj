@@ -103,7 +103,7 @@
       (let [img (BufferedImage. width height BufferedImage/TYPE_INT_ARGB)
             g2d (.createGraphics img)]
         ;; Set a background that fits the site's coffee-inspired palette.
-        (.setBackground g2d (Color. 255 248 225)) ; off-white background
+        (.setBackground g2d (Color. 0 0 0 0)) ; off-white background
         (.clearRect g2d 0 0 width height)
         (draw-professional-cup g2d i)
         (.dispose g2d)
